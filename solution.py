@@ -5,4 +5,4 @@ chat_id = 474140315 # Ваш chat ID, не меняйте название пе�
 
 def solution(x: np.array, y: np.array) -> bool:    
     (_, pvalue) = stats.ks_2samp(x, y)    
-    return pvalue < 0.01
+    return pvalue < 0.07
