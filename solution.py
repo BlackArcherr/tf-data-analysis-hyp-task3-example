@@ -1,11 +1,8 @@
 import pandas as pd
 import numpy as np
+import scipy.stats as stats
+chat_id = 474140315 # Ваш chat ID, не меняйте название переменной
 
-
-chat_id = 123456 # Ваш chat ID, не меняйте название переменной
-
-def solution(...) -> bool: # Одна или две выборке на входе, заполняется исходя из условия
-    # Измените код этой функции
-    # Это будет вашим решением
-    # Не меняйте название функции и её аргументы
-    return ... # Ваш ответ, True или False
+def solution(x: np.array, y: np.array) -> bool:    
+    (_, pvalue) = stats.ks_2samp(x, y)    
+    return pvalue < 0.01
